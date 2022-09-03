@@ -1,0 +1,274 @@
+:root {
+  --links-start-width: 0;
+  --links-end-width: 300;
+  --links-animation-length: 0.2s;
+}
+
+button:hover, form:hover, input:hover {
+  cursor: pointer
+}
+
+.links_button {
+  width: 70px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: none;
+  color: white;
+}
+
+.links_button:hover {
+  cursor: pointer;
+}
+.links_block {
+  width: 230px;
+  height: 0;
+  position: absolute;
+  left: 10px;
+  top: 55px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden; 
+  transition: all var(--links-animation-length) ease-in-out;
+  z-index: 999999999999999999999999999999999999;
+}
+
+
+.block__list {
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  height: 100%;
+
+  /* animation-name: showLinksCreate; */
+  /* animation-duration: 0.5s; */
+  transition: all var(--links-animation-length) ease-in-out;
+
+  background-color: white;
+  margin-bottom: 55px;
+}
+
+.block__create {
+  width: 230px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--links-animation-length) ease-in-out;
+  background-color: white;
+}
+
+
+@keyframes showLinksCreate {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -320px;
+  }
+}
+
+@keyframes returnToLinks {
+  from {
+    margin-left: -320px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+.addNewLink {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: white;
+  border: 0;
+}
+
+.newLink {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: white;
+}
+
+.link_button--addedText {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+  text-align: left;
+  margin: auto;
+  margin-left: 5px;
+}
+
+.link_button--logo {
+  background-image: url(../assets/svg/momentumButtonLogo50.svg);
+  min-width: 25px;
+  height: 25px;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+.addlink_button--logo {
+  background-image: url(../assets/svg/plusbutton50.svg);
+  min-width: 25px;
+  height: 25px;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.link_button--text {
+  display: flex;
+  margin: auto auto auto 5px;
+}
+
+
+.block__create--button {
+  background-image: url(../assets/svg/whiteArrowLeft.svg);
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2px auto 0 10px;
+  border-radius: 50%;
+  border: 0;
+  background-color: transparent;
+}
+
+.block__create--button:hover {
+  cursor: pointer;
+  background-image: url(../assets/svg/grayArrowLeft.svg);
+}
+
+.block__create--text {
+  color: black;
+  margin: 5px auto 0 10px;
+}
+
+.block__create--input {
+  margin: 2.5px 10px 0 10px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+.create__link--button:hover {
+  cursor: pointer;
+  background-color: rgba(213, 213, 213);
+}
+
+.block__create--line {
+  margin: 0 10px 5px 10px;
+  border: 0;
+  border-top: 1px solid rgb(129, 129, 129, 0.5);
+}
+
+.create__link--button {
+  width: 70px;
+  height: 20px;
+  margin: 10px auto 10px 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 9px;
+  background-color: rgb(207, 207, 207);
+}
+
+.input__one:hover + .line__one {
+  border-top: 1px solid rgb(129, 129, 129, 1);
+}
+
+.input__one:focus + .line__one {
+  border-top: 1px solid rgb(100, 100, 100);
+}
+
+.input__two:hover + .line__two {
+  border-top: 1px solid rgb(129, 129, 129, 1);
+}
+
+.input__two:focus + .line__two {
+  border-top: 1px solid rgb(100, 100, 100);
+}
+
+
+.editDots {
+  background-image: url(../assets/svg/transparentfontdots.svg);
+  background-color: transparent;
+  min-width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+}
+
+.editDots:hover {
+  background-image: url(../assets/svg/grayfontdots.svg);
+}
+
+.newLink:hover > .editDots {
+  opacity: 1;
+}
+
+.newLink:hover > .link_button--logo {
+  background-image: url(../assets/svg/momentumButtonLogo.svg);
+}
+.addNewLink:hover > .addlink_button--logo {
+  background-image: url(../assets/svg/plusbutton.svg);
+}
+.newLink:hover > .grayText {
+  color: rgb(0, 0, 0, 1);
+}
+.addNewLink:hover > .grayText {
+  color: rgb(0, 0, 0, 1);
+}
+
+.editOrDelete--block {
+  min-width: 70px;
+  min-height: 0;
+  height: 0;
+
+  position: absolute;
+  top: 20px;
+  left: 145px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000000000000000000000000;
+  background-color: rgb(224, 224, 224);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.changeButtons {
+  width: 100%;
+  height: 25px;
+  background-color: transparent;
+  border: 0;
+}
+
+.changeButtons:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.edit {
+  margin-top: 5px;
+}
+.editDeleteButtonsText {
+  text-align: center;
+}
+
+.grayText {
+  color: rgb(0, 0, 0, 0.5);
+}

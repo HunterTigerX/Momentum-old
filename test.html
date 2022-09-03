@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+  <link rel="stylesheet" href="css/links.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+  <button class="links_button">
+    Links
+  </button>
+
+  <div class="playerX">
+    <div class="links_block show_links_block">
+      <div class="block__list">
+
+        <button class="addNewLink">
+          <div class="addlink_button--logo"></div>
+          <p class="link_button--text grayText">New Link</p>
+        </button>
+
+        <div class="editOrDelete--block">
+          <button class="changeButtons edit">
+            <span class="editDeleteButtonsText">Edit</span>
+          </button>
+
+          <button class="changeButtons delete">
+            <span class="editDeleteButtonsText">Delete</span>
+          </button>
+        </div>
+
+
+      </div>
+
+      <div class="block__create">
+        <button class="block__create--button"></button>
+        <label for="nameCreate" class="block__create--text">NAME</label>
+        <input type="text" id="nameCreate" class="block__create--input input__one" placeholder="name of the bookmark"
+          required>
+        <hr class="block__create--line line__one">
+        <label for="emailCreate" class="block__create--text">LINKS</label>
+        <input type="email" id="emailCreate" pattern=".+@globex\.com" size="30" class="block__create--input input__two"
+          placeholder="example.com" required>
+        <hr class="block__create--line line__two">
+        <button class="create__link--button">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+  <script src="js/links.js"></script>
+
+
+</body>
+
+</html>

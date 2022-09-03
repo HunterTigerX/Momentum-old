@@ -1,0 +1,116 @@
+.settings {
+  min-width: 350px;
+  width: 50%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  position: absolute;
+  background-color: gray;
+  opacity: 0;
+  z-index: -999999;
+}
+
+.settings_button_close {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 auto;
+  background-image: url("../assets/img/cross.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.settings_button_close:hover {
+  cursor: pointer;
+}
+
+.openSettings {
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/img/gear-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.openSettings:hover {
+  cursor: pointer;
+}
+
+.select_block {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  justify-content: space-between;
+}
+
+.select_block > div {
+  width: 50%;
+  margin: auto auto auto 15px;
+}
+
+.select {
+  margin: auto 0 auto auto;
+}
+
+.select option {
+  text-align: center;
+}
+
+.select select {
+  margin-right: 0;
+  width: 100%;
+}
+
+.radio_block {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  justify-content: space-between;
+}
+.radio_block > div {
+  width: 50%;
+  margin: auto auto auto 15px;
+}
+.tag_block {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  justify-content: space-between;
+}
+
+.tag_block > div {
+  width: 50%;
+  text-align: center;
+  margin: auto auto auto 15px;
+}
+
+.pictureTag {
+  width: 100%;
+}
+.radio {
+  margin: auto 25px auto auto;
+  text-align: center;
+  padding: 0;
+}
+
+.hide {
+  transition: opacity 2s;
+  opacity: 0;
+}
+
+.show {
+  transition: opacity 2s;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+

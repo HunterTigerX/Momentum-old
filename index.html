@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+  <link rel="stylesheet" href="css/links.css" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <title>momentum</title>
+</head>
+
+<body>
+  <header class="header">
+
+    <div class="player">
+
+      <button class="links_button">
+        Закладки
+      </button>
+
+      <div class="playerX">
+        <div class="links_block hide_links_block">
+          <div class="block__list">
+
+            <button class="addNewLink">
+              <div class="addlink_button--logo"></div>
+              <p class="link_button--text grayText">Новая ссылка</p>
+            </button>
+          </div>
+
+          <div class="block__create">
+            <button class="block__create--button"></button>
+            <label for="nameCreate" class="block__create--text blockCreateText">НАЗВАНИЕ</label>
+            <input type="text" id="nameCreate" class="block__create--input input__one" placeholder="название закладки"
+              required>
+            <hr class="block__create--line line__one">
+            <label for="emailCreate" class="block__create--text blockCreateLink">ССЫЛКА</label>
+            <input type="email" id="emailCreate" pattern=".+@globex\.com" size="30"
+              class="block__create--input input__two" placeholder="example.com" required>
+            <hr class="block__create--line line__two">
+            <button class="create__link--button">Создать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="editOrDelete--block">
+        <button class="changeButtons edit">
+          <span class="editDeleteButtonsText">Изменить</span>
+        </button>
+
+        <button class="changeButtons delete">
+          <span class="editDeleteButtonsText">Удалить</span>
+        </button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="audio">
+        <audio src="./assets/sounds/Aqua Caelestis.mp3"></audio>
+        <div class="player-title">Aqua Caelestis</div>
+        <div class="player-slider">
+          <span id="player-time" class="player_time"></span> /
+          <span id="player-time-total" class="player_time_total"></span>
+          <input type="range" id="player-controls" max="100" value="0">
+        </div>
+        <div class="player-volume-block">
+          <span class="player_time">Volume</span>
+          <input type="range" id="volume-controls" max="100" value="0">
+          <button class="volume-icon volume-on"></button>
+        </div>
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <ul class="play-list">
+        </ul>
+      </div>
+    </div>
+    <div class="openSettings"> </div>
+    <div class="weather">
+
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container greetingX">
+      <span class="greeting"></span>
+      <input type="text" class="yourName" />
+    </div>
+
+    <div class="settings hide">
+      <div class="settings_button_close"> </div>
+      <div class="select_block select_block_one">
+        <div>Выберите язык</div>
+        <div class="select">
+          <select name="select_language" class="select_language">
+            <option value="Ru" selected>Russian</option>
+            <option value="En">English</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="select_block select_block_two">
+        <div>Выберите источник фотографий</div>
+        <div class="select">
+          <select name="select_photo_source" class="select_photo_source">
+            <option value="GitHub" selected>GitHub</option>
+            <option value="Unsplash">Unsplash</option>
+            <option value="Flickr">Flickr</option>
+          </select>
+        </div>
+      </div>
+      <div class="tag_block">
+        <div></div>
+        <div><input type="text" class="pictureTag" /></div>
+
+      </div>
+
+      <div class="radio_block">
+        <div>Display time</div>
+        <div class="radio">
+          <form class="DisplayTime">
+            <input type="radio" id="DisplayTimeOn" name="time" value="On" checked>
+            <label for="DisplayTimeOn" class="labelOn">On</label>
+
+            <input type="radio" id="DisplayTimeOff" name="time" value="Off">
+            <label for="DisplayTimeOff" class="labelOff">Off</label>
+          </form>
+        </div>
+      </div>
+
+      <div class="radio_block">
+        <div>Display date</div>
+        <div class="radio">
+          <form class="DisplayDate">
+            <input type="radio" id="DisplayDateOn" name="date" value="On" checked>
+            <label for="DisplayDateOn" class="labelOn">On</label>
+
+            <input type="radio" id="DisplayDateOff" name="date" value="Off">
+            <label for="DisplayDateOff" class="labelOff">Off</label>
+          </form>
+        </div>
+      </div>
+
+      <div class="radio_block">
+        <div>Display greeting</div>
+        <div class="radio">
+          <form class="Displaygreeting">
+            <input type="radio" id="DisplaygreetingOn" name="greeting" value="On" checked>
+            <label for="DisplaygreetingOn" class="labelOn">On</label>
+
+            <input type="radio" id="DisplaygreetingOff" name="greeting" value="Off">
+            <label for="DisplaygreetingOff" class="labelOff">Off</label>
+          </form>
+        </div>
+      </div>
+
+      <div class="radio_block">
+        <div>Display quote</div>
+        <div class="radio">
+          <form class="Displayquote">
+            <input type="radio" id="DisplayquoteOn" name="quote" value="On" checked>
+            <label for="DisplayquoteOn" class="labelOn">On</label>
+
+            <input type="radio" id="DisplayquoteOff" name="quote" value="Off">
+            <label for="DisplayquoteOff" class="labelOff">Off</label>
+          </form>
+        </div>
+      </div>
+
+      <div class="radio_block">
+        <div>Display weather</div>
+        <div class="radio">
+          <form class="Displayweather">
+            <input type="radio" id="DisplayweatherOn" name="weather" value="On" checked>
+            <label for="DisplayweatherOn" class="labelOn">On</label>
+
+            <input type="radio" id="DisplayweatherOff" name="weather" value="Off">
+            <label for="DisplayweatherOff" class="labelOff">Off</label>
+          </form>
+        </div>
+      </div>
+
+      <div class="radio_block">
+        <div>Display audio</div>
+        <div class="radio">
+          <form class="Displayaudio">
+            <input type="radio" id="DisplayaudioOn" name="audio" value="On" checked>
+            <label for="DisplayaudioOn" class="labelOn">On</label>
+
+            <input type="radio" id="DisplayaudioOff" name="audio" value="Off">
+            <label for="DisplayaudioOff" class="labelOff">Off</label>
+          </form>
+        </div>
+      </div>
+
+      <div class="radio_block">
+        <div>Display Links</div>
+        <div class="radio">
+          <form class="Displaytodolist">
+            <input type="radio" id="DisplaytodolistOn" name="todolist" value="On" checked>
+            <label for="DisplaytodolistOn" class="labelOn">On</label>
+
+            <input type="radio" id="DisplaytodolistOff" name="todolist" value="Off">
+            <label for="DisplaytodolistOff" class="labelOff">Off</label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+  <footer class="footer quoteX">
+    <button class="change-quote"></button>
+    <div>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+  </footer>
+  <script src="js/index.js"></script>
+  <script src="js/time.js"></script>
+  <script src="js/greetings.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/quote.js"></script>
+  <script type="module" src="js/player.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/calls.js"></script>
+  <script src="js/links.js"></script>
+</body>
+
+</html>
